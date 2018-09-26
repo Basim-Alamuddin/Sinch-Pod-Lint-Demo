@@ -1,0 +1,26 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '9.0'
+inhibit_all_warnings!
+use_frameworks!
+
+#pre_install do |installer|
+#    # workaround for https://github.com/CocoaPods/CocoaPods/issues/3289
+# Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
+#end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['SWIFT_VERSION'] = '3.0'
+        end
+    end
+end
+
+target 'FalconVOIP_Example' do
+    pod 'FalconVOIP', :path => '../'
+    
+    target 'FalconVOIP_Tests' do
+        inherit! :search_paths
+    end
+end

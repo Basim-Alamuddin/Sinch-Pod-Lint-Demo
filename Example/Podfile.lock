@@ -1,0 +1,23 @@
+PODS:
+  - FalconVOIP (1.0.0):
+    - SinchRTC (~> 3.12)
+  - SinchRTC (3.12.6)
+
+DEPENDENCIES:
+  - FalconVOIP (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SinchRTC
+
+EXTERNAL SOURCES:
+  FalconVOIP:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FalconVOIP: e9610b621ad08697beee4a5d5cb965244f005570
+  SinchRTC: 82ff35f50ee298ff632f88b934a2323b9b821a63
+
+PODFILE CHECKSUM: cc14c03276534019e77d2c214116379e65c224ba
+
+COCOAPODS: 1.5.3
